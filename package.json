@@ -1,0 +1,21 @@
+{
+  "name": "promise",
+  "version": "0.0.1",
+  "description": "Simple CommonJS Promise/A proposal implementation",
+  "main": "promise.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": "git@github.com:alexeyraspopov/promise.git",
+  "author": "Alexey Raspopov",
+  "license": "MIT",
+  "readmeFilename": "readme.md",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jshint": "~0.5.4",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jasmine": "~0.4.2",
+    "grunt-contrib-clean": "~0.4.1"
+  }
+}
