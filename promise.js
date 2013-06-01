@@ -1,3 +1,5 @@
+(function(factory){
+	'use strict';
 function Promise(){
 	this.pending = [];
 }
@@ -39,3 +41,14 @@ Promise.prototype.complete = function(type, data){
 };
 
 factory('Promise', Promise);
+})(function(name, object){
+	if(typeof define === 'function' && define.amd){
+		define(function(){
+			return object;
+		});
+	}else if(typeof window === 'object'){
+		window[name] = object;
+	}else{
+		module.exports = object;
+	}
+});
