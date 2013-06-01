@@ -17,7 +17,7 @@ require.config({
 	}
 });
 
-define(['promise'], function(promise){
+define(['promise'], function(Promise){
 	var promise = new Promise();
 });
 ```
