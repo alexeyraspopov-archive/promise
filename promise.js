@@ -32,8 +32,13 @@ Promise.prototype.complete = function(type, data){
 		promise = pending.promise;
 		result = pending[type](data);
 
+		/* jshint loopfunc: true */
 		if(result instanceof Promise){
-			result.then(promise.resolve.bind(promise), promise.reject.bind(promise));
+			result.then(function(data){
+				promise.resolve(data);
+			}, function(error){
+				promise.reject(error);
+			});
 		}else{
 			promise[type](result);
 		}

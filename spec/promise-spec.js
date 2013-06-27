@@ -1,16 +1,3 @@
-if(!Function.prototype.bind){
-	// TODO: create issue about this
-	Function.prototype.bind = function(context){
-		var slice = Array.prototype.slice,
-			that = this,
-			initialArguments = slice.call(arguments, 1);
-
-		return function(){
-			that.apply(context, initialArguments.concat(slice.call(arguments)));
-		};
-	};
-}
-
 describe('promise', function(){
 	var promise;
 
